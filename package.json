@@ -18,8 +18,7 @@
   ],
   "author": "Peter Ilusjin",
   "license": "ISC",
-  "bugs": {
-  },
+  "bugs": {},
   "dependencies": {
     "bootstrap": "^5.2.2"
   },
