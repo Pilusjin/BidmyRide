@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="dist/css/styles.css">
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="dist/css/styles.css">
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/src/js/index.mjs" defer type="module"></script>
 </head>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -20,13 +21,13 @@
             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Listing</a>
+            <a class="nav-link" href="listing.html">Listing</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="profile.html">Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Logout</a>
+            <a class="nav-link" href="login.html">Logout</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
@@ -42,22 +43,22 @@
             <div class="row">
               <div class="col">
                 <!-- LOGIN FORM -->
-                        <form class="login is-valid p-4 p-md-3 rounded-2" id="loginForm">
+                        <form class="login is-valid p-4 p-md-3 rounded-2" id="registerForm">
                             <h1>Log in</h1>
                             <div class="mb-4 mt-4">
                                 <label for="email" class="form-label">Email:</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+                                <input type="email" class="form-control" id="email" placeholder="Email (@stud.noroff.no or @noroff.no)" name="email" required pattern="^[\w\-.]+@(stud.)?noroff.no$" title="Only @(stud.)noroff.no domains are allowed to register.">
                                 <div class="valid-feedback">Valid.</div>
                                 <div class="invalid-feedback">Please fill out this field.</div>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password:</label>
-                                <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
+                                <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" requiredminlength="8">
                             </div>
                             <button type="submit" class="btn btn-primary">Log in</button>
                         </form> 
                         <hr class="my-4" />
-                        <p>Don't have an account? <a class="btn btn-primary" href="profile.html">Sign up!</a></p>
+                        <p>Don't have an account? <a class="btn btn-primary" href="signup.html">Sign up!</a></p>
               </div>
             </div>
           </div>
