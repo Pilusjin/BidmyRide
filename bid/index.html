@@ -4,28 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listing</title>
+    <title>Bids</title>
     <link rel="stylesheet" href="/dist/css/styles.css">
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/src/js/index.mjs" type="module"></script>
+    <script src="src/js/index.mjs" defer type="module"></script>
 </head>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<header>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/listings/index.html">Bidmyride</a>
+      <a class="navbar-brand" href="index.html">Bidmyride</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="/listings/index.html">Listings</a>
+            <a class="nav-link" href="listing.html">Listing</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/profile/index.html">Profile</a>
+            <a class="nav-link" href="profile.html">Profile</a>
           </li>
-          <li class="nav-item sign-out">
-            <a class="nav-link" id="sign-out" href="/index.html">Sign out</a>
+          <li class="nav-item">
+            <a 
+            class="nav-link sign-out" href="index.html">Sign out</a>
           </li>
+
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -33,24 +36,20 @@
         </form>
       </div>
     </div>
-</nav>
+  </nav>
+</header>
 <body>
-    <main>
+  <div class="container">
 
-    <div class="pt-5 pb-5 text-center">
-            <h1>Listings</h1>
-            <p>Paragraph</p>
+    <h1>Welcome to BidmyRide</h1>
+    
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+
+    <div class="m-2">
+        <h2>Feed</h2>
+        <div id="bids"></div>
     </div>
-
-    <form class="d-flex p-4 m-auto col-md-6 col-8" id="search">
-        <input class="form-control mr-sm-2 p-1" type="text" placeholder="Search" aria-label="Search" name="searchInput" >
-            <button class="btn btn-primary my-2 my-sm-0 p-1" type="submit">Search</button>
-    </form>
-
-    <div class="row row-cols-1 row-cols-md-2 g-4 my-1 col-10 m-auto" id="listings">
-            <!--List of listings thumbnails-->
-    </div>
-
-    </main>
+</div>
+</main>
 </body>
 </html>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="dist/css/styles.css">
+    <link rel="stylesheet" href="/dist/css/styles.css">
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/src/js/index.mjs" type="module"></script>
 </head>
@@ -18,16 +18,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link" href="/listing/index.html">Listing</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="listing.html">Listing</a>
+            <a class="nav-link" href="/profile/index.html">Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="profile.html">Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link sign-out" href="login.html">Sign out</a>
+            <a class="nav-link sign-out" id="sign-out" href="/index.html">Sign out</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
@@ -65,7 +62,7 @@
                   <label for="">Avatar</label>
                   <input class="form-control" type="url" name="avatar">
                 </div>
-                <button type="submit" class="btn btn-primary m-2">Change</button>
+                <button type="submit" class="btn btn-primary m-2">Update</button>
               </form>
 
             </div>
