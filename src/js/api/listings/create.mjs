@@ -1,5 +1,5 @@
 import { authFetch } from "../authFetch.mjs";
-import { BASE_URL } from "../constants.mjs"
+import { BASE_URL } from "../constants.mjs";
 
 const action = "/listings"
 
@@ -14,5 +14,6 @@ export async function createListing(listingData) {
     })
 
     alert("You have created a listing")
+    window.location.replace("../../../../profile")
     return await response.json();
 }

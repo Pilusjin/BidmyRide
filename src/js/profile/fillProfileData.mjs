@@ -16,10 +16,11 @@ export function fillProfileData() {
         profileCreditContainer.append(credit)
     }
 
-    const profileAvatarContainer = document.querySelector("#userAvatar");
-    if (profileAvatarContainer) {
-        const avatar = profile.avatar
-        profileAvatarContainer.append(avatar)
+    const profileAvatarImageElement = document.querySelector("#userAvatar");
+    if (profileAvatarImageElement) {
+        const avatarUrl = profile.avatar
+        console.log("avatar url", avatarUrl)
+        profileAvatarImageElement.setAttribute("src", avatarUrl)
     }
 
 }

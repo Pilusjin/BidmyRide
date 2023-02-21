@@ -116,7 +116,6 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 
 h1, .h1 {
   font-size: calc(1.375rem + 1.5vw);
-  
 }
 @media (min-width: 1200px) {
   h1, .h1 {
@@ -376,8 +375,9 @@ select:disabled {
 button,
 [type=button],
 [type=reset],
-[type=submit] 
-
+[type=submit] {
+  -webkit-appearance: button;
+}
 button:not(:disabled),
 [type=button]:not(:disabled),
 [type=reset]:not(:disabled),
@@ -434,6 +434,7 @@ legend + * {
 
 [type=search] {
   outline-offset: -2px;
+  -webkit-appearance: textfield;
 }
 
 /* rtl:raw:
@@ -454,6 +455,7 @@ legend + * {
 
 ::file-selector-button {
   font: inherit;
+  -webkit-appearance: button;
 }
 
 output {
@@ -2799,7 +2801,6 @@ textarea.form-control-lg {
   opacity: var(--bs-btn-disabled-opacity);
 }
 
-
 .btn-primary {
   --bs-btn-color: #fff;
   --bs-btn-bg: #0d6efd;
@@ -2815,7 +2816,7 @@ textarea.form-control-lg {
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: #0d6efd;
   --bs-btn-disabled-border-color: #0d6efd;
-  }
+}
 
 .btn-secondary {
   --bs-btn-color: #fff;
@@ -10771,13 +10772,6 @@ textarea.form-control-lg {
 form {
   max-width: 700px;
   margin: auto;
-}
-
-.bg-image {
-  background-image: url("path/to/your/image.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 500px;
 }
 
 /*# sourceMappingURL=styles.css.map */
