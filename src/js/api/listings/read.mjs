@@ -3,10 +3,9 @@ import { BASE_URL } from "../constants.mjs";
 
 const action = "/listings";
 const flag = "?_seller=true&_bids=true";
-const tags = "";
+const tags = "_tag=cars";
 
 // Get all listings
-// Needs to include tag to display ony wine
 
 export async function readListings() {
         
@@ -32,5 +31,28 @@ export async function readListing() {
     const response = await authFetch (getListingURL)
     
     return await response.json(); 
+
+}
+
+
+// Get listings by search 
+// Able to search by title
+
+export async function getListingsBySearch(search) {
+
+    const getListingsURL = `${BASE_URL}${action}?sort=created&sortOrder=desc&${tags}`; 
+
+    const response = await authFetch(getListingsURL)
+
+    const result = await response.json(); 
+
+    const lowerCasedSearch = search.toLowerCase()
+
+    let filtered = result.filter(listing => 
+        listing.title.toLowerCase().includes(lowerCasedSearch)
+    )
+
+    return filtered
+
 
 }

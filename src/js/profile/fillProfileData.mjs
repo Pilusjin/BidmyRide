@@ -16,11 +16,6 @@ export function fillProfileData() {
         profileCreditContainer.append(credit)
     }
 
-    const profileAvatarImageElement = document.querySelector("#userAvatar");
-    if (profileAvatarImageElement) {
-        const avatarUrl = profile.avatar
-        console.log("avatar url", avatarUrl)
-        profileAvatarImageElement.setAttribute("src", avatarUrl)
-    }
-
+    const profileAvatarContainer = document.querySelector("#userAvatar");
+    profileAvatarContainer.innerHTML = `<img src="${profile.avatar}" style="max-width:100%;"> `;
 }

@@ -11,7 +11,7 @@
 </head>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Bidmyride</a>
+      <a class="navbar-brand" href="/listings/index.html">Bidmyride</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -41,27 +41,23 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title text-center">Update your profile</h5>
-              <form id="registerForm">
+              <form id="updateProfile">
                 <div class="form-group">
-                  <label for="username">Username</label>
-                  <input type="text" class="form-control" id="username" placeholder="Enter username">
-                </div>
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                  <label for="password">Password</label>
-                  <input type="password" class="form-control" id="password" placeholder="Enter password">
-                </div>
-                <div class="form-group">
-                  <label for="">Banner</label>
-                  <input class="form-control" type="url" name="banner">
-                </div>
-                <div class="form-group">
-                  <label for="">Avatar</label>
-                  <input class="form-control" type="url" name="avatar">
-                </div>
+  
+                    <div class="form-group m-3">
+                      <label for="">Name</label>
+                      <input class="form-control" type="text" disabled name="name">
+                    </div>
+            
+                    <div class="form-group m-3">
+                      <label for="">Email</label>
+                      <input class="form-control" type="email" disabled name="email">
+                    </div>
+        
+                    <div class="form-group m-3">
+                      <label for="">Avatar</label>
+                      <input type="url" name="avatar" class="form-control">
+                    </div>
                 <button type="submit" class="btn btn-primary m-2">Update</button>
               </form>
 

@@ -7,7 +7,7 @@
     <title>Auction House | Profile</title>
     <link rel="stylesheet" href="/dist/css/styles.css">
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="src/js/index.mjs" defer type="module"></script>
+    <script src="/src/js/index.mjs" defer type="module"></script>
 </head>
 <header>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -38,77 +38,65 @@
     </div>
   </nav>
 </header>
-    <main>
+<main>
 
-        <div class="row d-flex m-2 col-11 m-auto pb-5">
+  <div class="row d-flex m-2 col-11 m-auto pb-5">
 
-            <!--Profile information-->
-                <!--Avatar-->
-                <!--User name-->
-                <!--Users total credit-->
-                <!--Update profile button-->
+      <div class="col-md-4 col-lg-4 pt-5">
+          <div class="card p-3 text-center">
+  
+              <div class="p-1" id="userAvatar">
+              </div>
+              <div class="p-1">
+                  <h2 id="userName"></h2>
+                  <p id="userCredit">Total credit: </p>
+                  <a href="/profile/update/index.html"><button class="btn btn-secondary">Update Profile</button></a>
+              </div>
 
-            <div class="col-md-4 col-lg-3 pt-5">
-                <div class="card p-3 text-center">
-                    <div class="p-1" id="userAvatar">
-                        <img> 
-                    </div>
-                    <div class="p-1x">
-                        <h2 id="userName"></h2>
-                        <p id="userCredit">Total credit amout: </p>
-                        <a href="/profile/update/index.html"><button class="btn btn-light">Update Profile</button></a>
-                    </div>
+          </div>
+      </div>
 
-                </div>
+      <div class="col-md-8 col-lg-8 pt-5">            
+          
+          <form id="createListing" class="card m-auto col-12 p-4">
 
-            </div>
-            
+              <h2>Post a listing</h2>
 
+              <div class="form-group mb-3">
+                <input type="text" name="title" class="form-control" placeholder="Title" required>
+              </div>
 
-            <div class="col-md-8 col-lg-9 pt-5">
+              <div class="form-group mb-3">
+                  <input type="datetime-local" name="endsAt" class="form-control" placeholder="Deadline" required>
+              </div>
+  
+              <div class="form-group mb-3">
+                  <textarea  name="description" class="form-control" placeholder="Description..." required></textarea>
+              </div>
 
+              <div class="form-group mb-3">
+                  <input type="test" name="tags" class="form-control" placeholder="Tags">
+              </div>
 
-            <!--Form for creating listings-->
-                <!--With title, deadline date, media gallery and description-->
-                <!--Ability to make bid on other users listings-->
-                <!--Bids on listing-->              
-                
-                <form id="createListing" class="card m-auto col-12 p-4">
+              <div class="form-group mb-3">
+                  <input type="url" name="media" class="form-control" placeholder="Image url">
+              </div>
+  
+              <a ><button class="btn btn-secondary" type="submit">Post Listing</button></a>
+          </form>
 
-                    <h2>Post a listing</h2>
+          
+          <!--DISPLAY ONLY LISTINGS BY USER-->
 
-                    <div class="form-group mb-3">
-                      <input type="text" name="title" class="form-control" placeholder="Title" required>
-                    </div>
+          <div class="pt-5">
+              <h1 class="text-center">Listings by me</h1>
+              <div id="listings"></div>
+          </div>
 
-                    <div class="form-group mb-3">
-                        <input type="datetime-local" name="endsAt" class="form-control" placeholder="Deadline" required>
-                    </div>
-        
-                    <div class="form-group mb-3">
-                        <textarea  name="description" class="form-control" placeholder="Description..." required></textarea>
-                    </div>
+      </div>
 
-                    <div class="form-group mb-3">
-                        <input type="url" name="media" class="form-control" placeholder="Image url">
-                    </div>
-                    
-                    <div class="form-group mb-3">
-                        <input name="tags" class="form-control" placeholder="Tags (separated by a comma and space)">
-                    </div>
-        
-                    <a ><button class="btn btn-light" type="submit">Post Listing</button></a>
-                </form>
+  </div>
 
-            <!--Only listings posted by user-->
-
-                <div class="pt-3">
-                    <h1 class="text-center">My listings</h1>
-                    <div id="listings"></div>
-                </div>
-            </div>
-        </div>
-
-    </main>
+</main>
 </body>
 </html>

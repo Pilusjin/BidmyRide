@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="/dist/css/styles.css">
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="src/js/index.mjs" defer type="module"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auction House | Listings</title>
+  <link rel="stylesheet" href="/dist/css/styles.css">
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/src/js/index.mjs" type="module"></script>
 </head>
-<header>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/listings/index.html">Bidmyride</a>
+      <a class="navbar-brand" href="/listing/index.html">Bidmyride</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="/listings/index.html">Listings</a>
+            <a class="nav-link" href="/listing/index.html">Listing</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/profile/index.html">Profile</a>
           </li>
           <li class="nav-item">
-            <a 
-            class="nav-link sign-out" href="/index.html">Sign out</a>
+            <a class="nav-link" id="sign-out" href="/index.html">Logout</a>
           </li>
-
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -39,6 +36,7 @@
   </nav>
 </header>
 <body>
+  <main>
   <div class="container">
 
     <h1>Welcome to BidmyRide</h1>
@@ -47,7 +45,8 @@
 
     <div class="m-2">
         <h2>Feed</h2>
-        <div id="listing"></div>
+        <div id="listing" class="pb-3 pt-5"></div>
+        <div id="bids" class="m-auto mt-3 col-11 col-md-9 col-lg-8 pb-5"></div>
     </div>
 </div>
 </main>

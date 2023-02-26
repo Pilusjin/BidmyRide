@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up</title>
+  <title>Auction House | Listings</title>
   <link rel="stylesheet" href="/dist/css/styles.css">
   <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/src/js/index.mjs" type="module"></script>
@@ -34,40 +34,18 @@
       </div>
     </div>
   </nav>
-  <body>
-    <div class="container my-5">
-      <div class="row">
-        <div class="col-md-6 mx-auto">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title text-center">Sign Up</h5>
-              <form id="signupForm">
-                <div class="form-group">
-                  <label for="username">Username</label>
-                  <input type="text" name="name" class="form-control" id="username" placeholder="Enter username">
-                </div>
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                  <label for="password">Password</label>
-                  <input type="password" name="password" class="form-control" id="password" placeholder="Enter password">
-                </div>
-                <div class="form-group">
-                  <label for="">Banner</label>
-                  <input class="form-control" type="url" name="banner">
-                </div>
-                <div class="form-group">
-                  <label for="">Avatar</label>
-                  <input class="form-control" type="url" name="avatar">
-                </div>
-                <button type="submit" class="btn btn-primary m-2">Sign up!</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+        
+
+    <main>
+
+        <h1>Bid on item</h1>
+        <p>Current bid:</p>
+        <form id="createBid">
+            <input name="amount" type="number">
+            <button type="submit">Place bid</button>
+            
+        </form>
+
+    </main>  
+</body>
 </html>

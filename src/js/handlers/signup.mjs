@@ -1,7 +1,7 @@
 import { register } from "../api/auth/signup.mjs";
 
 export function setRegisterFormListener() {
-  const form = document.querySelector("#registerForm");
+  const form = document.querySelector("#signupForm");
 
   if (form) {
     form.addEventListener("submit", (event) => {
