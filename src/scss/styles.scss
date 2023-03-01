@@ -1,9 +1,7 @@
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "/src/scss/variables";
 
-
-form {
-    max-width: 700px;
-    margin: auto;
+.card {
+    border: none;
 }
-  
