@@ -1,7 +1,15 @@
+@import "variables.scss";
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
-@import "/src/scss/variables";
 
-.card {
-    border: none;
+
+.form-control {
+    background-color: #EEEEF0;
+}
+h1 {
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 22px;
 }
