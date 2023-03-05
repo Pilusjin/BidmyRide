@@ -8,7 +8,6 @@ export function singleListingTemplate(listingData) {
 
 
     try {
-
     
 
         readListing.innerHTML = `<div class="card m-auto mt-3 col-11 col-md-9 col-lg-8 p-4 d-flex flex-row">
@@ -25,7 +24,7 @@ export function singleListingTemplate(listingData) {
                     <p>Deadline: ${endsAt}</p>
                     <p>Number of bids: ${listingData._count.bids}</p>
                 </div>
-                <a href="/listing/bid/index.html?id=${listingData.id}"><button class="btn btn-secondary">Bid on item</button></a>
+
             </div>
             </div>
         

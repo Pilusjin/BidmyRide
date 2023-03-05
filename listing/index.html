@@ -7,44 +7,54 @@
   <meta name="description" content="Auction House listing site here you can see who has make a bid">
   <title>Listings</title>
   <link rel="stylesheet" href="/dist/css/styles.css">
-  <script src="/src/js/index.mjs" type="module"></script>
+  <script src="/src/js/index.mjs" defer type="module"></script>
 </head>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a href="/listings/index.html"><img src="/images/Bidmyride logo.png" class="logo"></a>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="/listings/index.html">Listing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/profile/index.html">Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="sign-out" href="/index.html">Logout</a>
-          </li>
-        </ul>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a href="/listings/index.html"><img src="/images/Bidmyride logo.png" class="logo"></a>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/listings/index.html">Listing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/profile/index.html">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="sign-out" href="/index.html">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  </header>
+  <main>
+    <div class="container">
+      <div class="m-2">
+        <div id="listing" class="pb-3 pt-5"></div>
+
+        <div class="container card text-center pt-5 pb-5 g-4 my-5 col-12 m-auto">
+          <div class="m-2">
+            <h1>Bid on item</h1>
+            <p>Current bid:</p>
+            <form id="createBid" >
+              <input name="amount" type="number">
+              <button class="btn btn-secondary" type="submit">Place bid</button>
+            </form>
+          </div>
+        </div>
+
+        <div id="bids" class="m-auto mt-3 col-11 col-md-9 col-lg-8 pb-5"></div>
       </div>
     </div>
-  </nav>
-</header>
-<body>
-  <main>
-  <div class="container">
-    
-    <div class="m-2">
-        <div id="listing" class="pb-3 pt-5"></div>
-        <div id="bids" class="m-auto mt-3 col-11 col-md-9 col-lg-8 pb-5"></div>
+
+    <div class="spinner-border d-none" role="status">
+      <span class="visually-hidden">Loading...</span>
     </div>
-</div>
 
-<div class="spinner-border" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
-
-<footer class="mt-auto text-center p-4">
-  <p>&copy; Built by Peter Ilusjin</p>
-</footer>  
-
-</main>
+    <footer class="mt-auto text-center p-4">
+      <p>&copy; Built by Peter Ilusjin</p>
+    </footer>  
+  </main>
 </body>
 </html>

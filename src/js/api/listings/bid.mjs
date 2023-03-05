@@ -4,7 +4,7 @@ import { BASE_URL } from "../constants.mjs"
 
 const action = "/listings"
 
-const queryString = document.location.search; 
+const queryString = document.location.search;
 const params = new URLSearchParams(queryString); 
 const id = params.get("id");
 

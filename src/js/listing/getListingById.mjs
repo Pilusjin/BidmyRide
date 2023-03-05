@@ -18,7 +18,7 @@ export async function getListingById() {
           });
 
         templates.renderSingleListing(listing, listingContainer);
-        templates.renderBids(bidsList, bidsContainer); // print out the bidsList the same way listings are printed out
+        templates.renderBids(bidsList, bidsContainer);
     }
 }
 
