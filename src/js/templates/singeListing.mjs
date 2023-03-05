@@ -2,6 +2,10 @@ export function singleListingTemplate(listingData) {
 
     const endsAt = new Date(listingData.endsAt).toLocaleString();
     const readListing = document.createElement("div");
+    
+    const loader = document.querySelector(".spinner-border"); 
+    loader.style.display = "none";
+
 
     try {
 

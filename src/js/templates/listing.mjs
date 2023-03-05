@@ -6,6 +6,9 @@ export function listingTemplate(listingData) {
     try {
         const endsAt = new Date(listingData.endsAt).toLocaleString();
 
+        const loader = document.querySelector(".spinner-border"); 
+        loader.style.display = "none";
+
 
         readListing.innerHTML = `<div class="card p-3 mb-3">
         <h2>${listingData.title}</h2>
